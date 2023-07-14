@@ -1,26 +1,26 @@
 import java.util.Scanner;
 
-public class ExerFrutas {
-    public void carrinhoDeCompras(){
-        double totalDaCompra=0;
+public class  ExerFrutas {
+    public static void main(String[] args) {
+        double totalDaCompra=0.0;
         System.out.println("Bem vindos a Frutaria da Maria");
         System.out.println("Estamos em promoção das frutas Peras,Laranja,Maça,Tomate,Caqui");
         String[] Frutas ={"Pera", "Laranja","Maça","Tomate","Caqui" };
 
         for(int i=0;i<5;i++){
-            System.out.println("Digite que deseja de "+Frutas[i]);
+            System.out.println("Digite a quantidade que deseja de "+Frutas[i]);
             Scanner scanner = new Scanner(System.in);
-            int quantidade = scanner.nextInt();
+            double quantidade = scanner.nextDouble();
             totalDaCompra=totalDaCompra+valorFruta(quantidade);
-            System.out.printf("Até o momento o total da compra está em %0.2d\n",totalDaCompra);
-
-
-
+            System.out.println(quantidade+" "+Frutas[i]+" saindo a um total de " + valorFruta(quantidade));
+            System.out.printf("Até o momento o total da compra está em %.2f\n",totalDaCompra);
+            scanner.nextLine();
 
         }
-        System.out.printf("Agradecemos as compras o valor total foi de %0.2d\n",totalDaCompra);
+
+        System.out.printf("\n\nAgradecemos as compras o valor total foi de %.2f\n",totalDaCompra);
     }
-    public double valorFruta(int qtd){
+    public static double valorFruta(double qtd){
         double totalFruta;
         if(qtd<10){
             totalFruta= qtd*1.45;
