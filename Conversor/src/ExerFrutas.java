@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class  ExerFrutas {
     public static void main(String[] args) {
         double totalDaCompra=0.0;
-        System.out.println("Bem vindos a Frutaria da Maria");
+        System.out.println("---------Bem vindos a Frutaria da Maria-------------");
         System.out.println("Estamos em promoção das frutas Peras,Laranja,Maça,Tomate,Caqui");
         String[] Frutas ={"Pera", "Laranja","Maça","Tomate","Caqui" };
 
