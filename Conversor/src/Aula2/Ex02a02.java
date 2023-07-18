@@ -1,6 +1,6 @@
 package Aula2;
 
-public class OrdenarAr {
+public class Ex02a02 {
 
 /*import java.util.Arrays;
 import java.util.Collections;

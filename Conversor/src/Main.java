@@ -1,8 +1,6 @@
-package Aula1;
-
 import java.util.Scanner;
 
-public class Ex01a01 {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite a temperatura em Fª ");

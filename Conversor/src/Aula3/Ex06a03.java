@@ -2,7 +2,7 @@ package Aula3;
 
 import static java.lang.Math.sqrt;
 
-public class EX06 {
+public class Ex06a03 {
     public static void main(String[] args) {
         double area = calcularArea(9, 7, 14);
         System.out.println(area);

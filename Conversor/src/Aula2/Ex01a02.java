@@ -2,7 +2,7 @@ package Aula2;
 
 import java.util.Scanner;
 
-public class  ExerFrutas {
+public class Ex01a02 {
     public static void main(String[] args) {
         double totalDaCompra=0.0;
         System.out.println("---------Bem vindos a Frutaria da Maria-------------");
