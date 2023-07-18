@@ -1,6 +1,6 @@
 package Aula3;
 
-public class CustoCarros {
+public class Ex02a03 {
    /* public class Solution {
         public static double[] custosCarro( double[] input) {
             double[] output = new double[2];

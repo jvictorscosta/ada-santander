@@ -1,22 +1,20 @@
 package Aula3;
 
 public class Ex01a03 {
-    private static double PROMOTIONAL_PRICE = 1.25;
-    private static double REGULAR_PRICE = 1.45;
-    private static int PROMOTIONAL_QUANTITY = 11;
-
-    public static double custoCompra(double input) {
-        if (input >= PROMOTIONAL_QUANTITY) {
-            return input * PROMOTIONAL_PRICE;
-        }
-
-        return input * REGULAR_PRICE;
-    }
-
     public static void main(String[] args) {
-        double input = 10;
-        double output = custoCompra(input);
+        //Maria tem uma frutaria e está com uma promoção para quem comprar mais de 10 frutas (LMS)
+        System.out.println(custoCompra(12.0));
 
-        System.out.println(output);
+        }
+    public static double custoCompra(double input) {
+        double output;
+        if(input > 10){
+            output = input*1.25;
+        } else {
+            output = input*1.45;
+        }
+        System.out.printf("%.2d",output);
+        return output;
+
     }
 }
