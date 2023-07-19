@@ -1,21 +1,23 @@
 package Aula2;
 
+import java.util.Arrays;
+
 public class Ex02a02 {
 
-/*import java.util.Arrays;
-import java.util.Collections;
 
 
-public class OrdenarArrays {
-    public static int[] main(String[] args) {
         public static void main (String[]args){
             int[] numbers = {5, 4, 1, 2, 3};
             int[] ascendingOrder = sortAscendingOrder(numbers);
             int[] descendingOrder = sortDescendingOrder(numbers);
+            //int[] evenNumbers = filterEvenNumbers(ascendingOrder);
+            //int[] oddNumbers = filterOddNumbers(ascendingOrder);
 
             System.out.println(Arrays.toString(numbers));
             System.out.println(Arrays.toString(ascendingOrder));
             System.out.println(Arrays.toString(descendingOrder));
+            //System.out.println(Arrays.toString(evenNumbers));
+            //System.out.println(Arrays.toString(oddNumbers));
 
 
         }
@@ -28,36 +30,31 @@ public class OrdenarArrays {
             return numerosTrocados;
         }
 
-        public static int sortAscendingOrder ( int numbers[]){
+        public static int[] sortAscendingOrder ( int numbers[]){
             int[] numbersCrescente = numbers.clone();
             for (int i = 0; i < numbers.length; i++) {
                 for (int j = 0; j < numbers.length; j++) {
-
-                    if (numbersCrescente[j] > numbersCrescente[j + 1]) {
-                        swap(Collections.singletonList(numbersCrescente), j, j + 1);
-
-
+                    if (numbersCrescente[i] < numbersCrescente[j]) {
+                        numbersCrescente= swap(numbersCrescente, i, j);
                     }
                 }
             }
             return numbersCrescente;
         }
-        public static int sortDescendingOrder ( int numbers[]){
+        public static int[] sortDescendingOrder ( int numbers[]){
             int[] numbersDecrescente = new int[numbers.length];
             for (int i = 0; i < numbers.length; i++) {
-                for (int j = 0; j < numbers.length; j++) {
-
-                    if (numbersDecrescente[j] > numbersDecrescente[j + 1]) {
-                        swap(Collections.singletonList(numbersDecrescente), j, j + 1);
-
-
+                for (int j = 0; j < numbers.length-1; j++) {
+                    if (numbersDecrescente[i] < numbersDecrescente[j]) {
+                        numbersDecrescente=swap(numbersDecrescente, i, j);
                     }
                 }
             }
+            System.out.println(Arrays.toString(numbersDecrescente));
             return (numbersDecrescente);
         }
     }
-}
-}*/
 
-}
+
+
+
