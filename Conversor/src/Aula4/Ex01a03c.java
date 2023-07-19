@@ -1,10 +1,10 @@
-package Aula3;
+package Aula4;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Arrays;
 import java.util.Locale;
 
-public class Ex02a03c {
+public class Ex01a03c {
     public static void main(String[] args) {
         double[][] entradas = {
                 {100000.00, 12000.00, 20000.00},
