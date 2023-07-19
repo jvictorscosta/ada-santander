@@ -29,7 +29,6 @@ public class Ex03a04c {
                 "A",
                 "D"
         };
-
         for (int i = 0; i < entradas.length; i++) {
             String resultado = mediaAproveitamento(entradas[i]);
             String esperado = saidas[i];
@@ -53,7 +52,6 @@ public class Ex03a04c {
         }else {
             nota ="A";
         }
-
 return nota;
     }
 }
