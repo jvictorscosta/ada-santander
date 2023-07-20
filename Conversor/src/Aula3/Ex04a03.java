@@ -2,6 +2,7 @@ package Aula3;
 
 public class Ex04a03 {
     public static void main(String[] args) {
+        System.out.println(primeiroCaractereUnico("Bolacha"));
 
     }
     public static int primeiroCaractereUnico(String input) {
