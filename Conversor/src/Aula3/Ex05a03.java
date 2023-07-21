@@ -28,11 +28,8 @@ public class Ex05a03 {
                     temp=numbersCrescente[j];
                     numbersCrescente[j]=numbersCrescente[j+1];
                     numbersCrescente[j+1]=temp;
-
-
                 }
             }
-
         }
         return numbersCrescente;
     }
