@@ -1,5 +1,8 @@
 package Aula4;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Ex06a04c { public static void main(String[] args) {
     double[][] entradas = {
             {2.5, 3.2, 4.5, 5, 6},
@@ -37,11 +40,16 @@ public class Ex06a04c { public static void main(String[] args) {
 }
 
     public static boolean elementosRepetidos(double[] input) {
-    input=sortAscendingOrder(input);
-    int i=0;
-    while(i<(input.length-2) && input[i]!=input[i+1] ){
+        System.out.println(Arrays.toString(input));
+    double [] inputOrdenado=sortAscendingOrder(input);
 
-        if (input[i] == input[i+1]) {
+    int i=0;
+    while(i<=inputOrdenado.length) {
+        int j = i+1;
+
+
+        if(inputOrdenado.length==1 || j>=inputOrdenado.length){return false;}
+        else if (inputOrdenado[i] == inputOrdenado[j]) {
             return true;
         }
         i=i+1;
@@ -51,8 +59,11 @@ public class Ex06a04c { public static void main(String[] args) {
     public static double[] sortAscendingOrder(double[] numbers) {
         double[] numbersCrescente = numbers.clone();
         double temp;
+        if(numbers.length<=1){
+            return numbers;
+        }
         for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < numbers.length; j++) {
+            for (int j = 0; j < numbers.length-1; j++) {
                 if (numbersCrescente[j] > numbersCrescente[j + 1]) {
                     temp=numbersCrescente[j];
                     numbersCrescente[j]=numbersCrescente[j+1];
@@ -60,6 +71,7 @@ public class Ex06a04c { public static void main(String[] args) {
                 }
             }
         }
+        System.out.println(Arrays.toString(numbersCrescente));
         return numbersCrescente;
     }
 }
