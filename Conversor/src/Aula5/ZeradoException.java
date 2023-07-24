@@ -6,5 +6,6 @@ public class ZeradoException extends Exception {
     }
     public ZeradoException(String msg){
         super(msg);
+        System.out.println("Quantidade informada é igual a 0.");
     }
 }

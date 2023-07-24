@@ -3,7 +3,7 @@ package Aula5;
 import java.util.Scanner;
 
 public class Ex01a05c {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NegativoException, ZeradoException {
 
 
     double totalDaCompra=0.0;
@@ -15,13 +15,8 @@ public class Ex01a05c {
         System.out.println("Digite a quantidade que deseja de "+Frutas[i]);
         Scanner scanner = new Scanner(System.in);
         double quantidade = scanner.nextDouble();
-        try {
             validarCompraPositiva(quantidade);
-        }catch (NegativoException e){}
-
-        //try {validarQuantidadeMaiorQueZero(quantidade);}
-        //catch (ZeradoException e){}
-
+            validarQuantidadeMaiorQueZero(quantidade);
         totalDaCompra=totalDaCompra+valorFruta(quantidade);
         System.out.println(quantidade+" "+Frutas[i]+" saindo a um total de " + valorFruta(quantidade));
         System.out.printf("\n\nAté o momento o total da compra está em %.2f\n",totalDaCompra);
@@ -38,15 +33,16 @@ public class Ex01a05c {
             return(totalFruta);
         }
     }
-    //Validade se é menor que zero
+    //Valida se é menor que zero.
     public static void validarCompraPositiva(double quantidade) throws NegativoException {
         if(quantidade<0){
             throw new NegativoException ();
         }
     }
-    //public static void validarQuantidadeMaiorQueZero(double quantidade) throws ZeradoException {
-    //    if(quantidade == 0){
-    //        throw new ZeradoException("Quantidade Zerada");
-    //    }
-    //}
+    //Valida se é igual a que zero.
+    public static void validarQuantidadeMaiorQueZero(double quantidade) throws ZeradoException {
+        if(quantidade == 0){
+            throw new ZeradoException();
+        }
+    }
 }
