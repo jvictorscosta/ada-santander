@@ -3,7 +3,7 @@ package Aula5;
 import java.util.Scanner;
 
 public class Ex01a05c {
-    public static void main(String[] args) throws NegativoException, ZeradoException {
+    public static void main(String[] args) {
 
 
     double totalDaCompra=0.0;
@@ -15,13 +15,27 @@ public class Ex01a05c {
         System.out.println("Digite a quantidade que deseja de "+Frutas[i]);
         Scanner scanner = new Scanner(System.in);
         double quantidade = scanner.nextDouble();
+
+        try {
             validarCompraPositiva(quantidade);
+        }catch (NegativoException e){
+            System.out.println(e.getMessage());
+        }
+
+        try {
             validarQuantidadeMaiorQueZero(quantidade);
+        }catch (ZeradoException e){
+            System.out.println(e.getMessage());
+        }
+
+        //try {validarQuantidadeMaiorQueZero(quantidade);}
+        //catch (ZeradoException e){}
+
         totalDaCompra=totalDaCompra+valorFruta(quantidade);
         System.out.println(quantidade+" "+Frutas[i]+" saindo a um total de " + valorFruta(quantidade));
-        System.out.printf("\n\nAté o momento o total da compra está em %.2f\n",totalDaCompra);
+        System.out.printf("\nAté o momento o total da compra está em %.2f\n",totalDaCompra);
         scanner.nextLine();
-    }   System.out.printf("\n\nAgradecemos as compras o valor total foi de %.2f\n",totalDaCompra);
+    }   System.out.printf("\nAgradecemos as compras o valor total foi de %.2f\n",totalDaCompra);
 }
     public static double valorFruta(double qtd){
         double totalFruta;
@@ -36,13 +50,13 @@ public class Ex01a05c {
     //Valida se é menor que zero.
     public static void validarCompraPositiva(double quantidade) throws NegativoException {
         if(quantidade<0){
-            throw new NegativoException ();
+            throw new NegativoException ("Quantidade informada negativa");
         }
     }
     //Valida se é igual a que zero.
     public static void validarQuantidadeMaiorQueZero(double quantidade) throws ZeradoException {
         if(quantidade == 0){
-            throw new ZeradoException();
+            throw new ZeradoException("Quantidade informada é igual a Zero");
         }
     }
 }
