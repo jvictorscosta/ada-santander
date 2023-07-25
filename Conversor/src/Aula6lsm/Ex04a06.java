@@ -1,10 +1,8 @@
-package Aula6;
-
-import java.util.Arrays;
+package Aula6lsm;
 
 public class Ex04a06 {
     public static void main(String[] args) {
-        int [] input = {1,1,2,2,5,5,5,4,4,10,10};
+        int [] input = {1,2,2,5,5};
         System.out.println(numeroUnico(input));
     }
     public static int numeroUnico( int[] input) {

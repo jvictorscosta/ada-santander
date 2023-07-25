@@ -1,4 +1,4 @@
-package Aula6;
+package Aula6lsm;
 
 public class Ex03a06 {
     public static void main(String[] args) {

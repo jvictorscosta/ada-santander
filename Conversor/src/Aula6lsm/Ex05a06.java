@@ -1,4 +1,4 @@
-package Aula6;
+package Aula6lsm;
 
 //As condições da promoção dizem que, na compra
 //de duas peças, será dado 50% de desconto na peça de menor de valor.
