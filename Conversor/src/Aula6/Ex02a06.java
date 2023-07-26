@@ -12,7 +12,7 @@ import Aula6.Estado;
 //Considerar as seguintes restrições quanto a entrada e saída dos dados: arredondamento de 4 casas no valor final do produto
 public class Ex02a06 {
 
-    /*public static void main(String[] args) throws EstadoInvalidoException {
+    public static void main(String[] args) throws EstadoInvalidoException, Aula6.EstadoInvalidoException {
 
         System.out.println(valorProdutoFinal(250.10, "MG") == 267.607);
         System.out.println(valorProdutoFinal(250.10, "RJ") == 287.615);
@@ -20,14 +20,14 @@ public class Ex02a06 {
 
         try {
             valorProdutoFinal(250.10, "DF");
-        } catch (EstadoInvalidoException e) {
-            System.out.println("Estado inválido!");
+        } catch (IllegalArgumentException e) {
+            throw new Aula6.EstadoInvalidoException("Estado inválido");
         }
-    }*/
+    }
 
 
-    public static double valorProdutoFinal(double valorProduto, Estado estadoDestino) throws EstadoInvalidoException {
-        return arredondar(valorProduto * (1 + ((estadoDestino.getTaxa()) / 100)));
+    public static double valorProdutoFinal(double valorProduto, String estadoDestino) throws EstadoInvalidoException {
+        return arredondar(valorProduto * (Estado.valueOf(estadoDestino).getTaxa()));
     }
 
     public static double arredondar(double numero) {

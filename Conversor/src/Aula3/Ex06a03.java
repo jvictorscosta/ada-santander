@@ -17,7 +17,7 @@ public class Ex06a03 {
         return areaTriangulo;}
 
         else{
-            throw new IllegalArgumentException("whatever");
+            throw new IllegalArgumentException("ERROR 404");
         }
 
     }

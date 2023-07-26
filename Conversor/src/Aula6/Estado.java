@@ -2,11 +2,11 @@ package Aula6;
 
 
     public enum Estado {
-        MG(7),
-        RJ(15),
-        SP(12);
+        MG(1.07),
+        RJ(1.15),
+        SP(1.12);
 
-        private  double taxa;
+        final double taxa;
         Estado(double taxa){
 
             this.taxa = taxa;
