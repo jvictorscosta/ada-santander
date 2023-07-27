@@ -8,6 +8,7 @@ public class lms01 {
     }
     public static String[] soletrandoStr(String input) {
         String[] soletrando= new String[input.length()];
+
         for(int i = 0;i<input.length();i++){
             soletrando[i]= String.valueOf(input.charAt(i));
         }
