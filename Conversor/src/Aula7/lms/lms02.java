@@ -1,11 +1,11 @@
-package Aula7;
+package Aula7.lms;
 
 public class lms02 {
     public static void main(String[] args) {
         System.out.println(geraSequenciaFibonacci(0));
 
     }
-    public static String geraSequenciaFibonacci(int input) {
+    public static String numeroPertenceASequenciaFibonacci(int input) {
 
     if(input==0){
         return "0";
